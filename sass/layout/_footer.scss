@@ -1,0 +1,14 @@
+.footer {
+    background: $colour-black;
+    color: $colour-white;
+    height: 6rem;
+    width: 100%;   
+    &__logo {
+        font-size: 1rem;
+        margin: 1rem;
+    }
+    &__list {
+        font-size: 1rem;
+        margin: 1rem;
+    }
+}

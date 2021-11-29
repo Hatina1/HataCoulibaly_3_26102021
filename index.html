@@ -4,22 +4,22 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/font-awesome/css/all.min.css">
-        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/main.css">
         <title>Oh my Good - Reservations</title>
     </head>
     <body>
         <!-- HEADER-->
-        <header>
-            <a href="#"><img class="logo" src="css/images/logo/ohmyfood.png"  alt="logo_ohmyfood"></a>
+        <header class="header">
+            <a href="#"><img class="header__logo" src="css/images/logo/ohmyfood.png"  alt="logo_ohmyfood"></a>
         </header> 
         <!-- VILLE-->
-        <div class="city">
-            <i class="fa fa-search ic-search"></i>
-            <p class="city-neighb">Paris, Belleville</p>
+        <div class="home__city">
+            <i class="fa fa-search home__ic--search"></i>
+            <p class="home__neighb">Paris, Belleville</p>
         </div>
         <!-- PRESENTATION-->
-        <div class="pres">
+        <div class="home__pres">
             <h1 class="pres--title">
                 Réservez le menu qui vous convient
             </h1>
@@ -29,19 +29,19 @@
             <button class="pres--button"> Explorer nos restaurants</button>
         </div>
         <!-- FONCTIONNEMENT-->
-        <div>
-            <h1 class="section--title"> Fonctionnement </h1>
-            <div class="filtre">
+        <div class="home__filter">
+            <h2 class="section--title"> Fonctionnement </h2>
+            <div>
                 <ol class="list">
-                    <li><i class="fa fa-phone fonc--ico"></i>Fonctionnement</li>
-                    <li><i class="fa fa-list fonc--ico"></i>Composez votre menu</li>
-                    <li><i class="fa fa-store fonc--ico"></i>Dégustez au restaurant</li>
+                    <li><button class="pres--button"><i class="fa fa-phone fonc--ico"></i>Choisissez un restaurant</button></li>
+                    <li><button class="pres--button"><i class="fa fa-list fonc--ico"></i>Composez votre menu</button></li>
+                    <li><button class="pres--button"><i class="fa fa-store fonc--ico"></i>Dégustez au restaurant</button></li>
                 </ol>
             </div>
         </div>
         <!-- LISTE RESTAURANTS-->
-        <div>
-            <h1 class="section--title"> Restaurants </h1>
+        <div class="home__resto">
+            <h2 class="section--title"> Restaurants </h2>
             <div class="resto--card">
                 <a href="Menu1.html"><img class="logo" alt="Palette du goût"></a>
                     <p class="resto--badge"> Nouveau</p>
@@ -79,8 +79,8 @@
         </div>
         <!--FOOTER-->
         <footer>
-            <a href="#"><img class="logo" src="css/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="logo_ohmyfood"></a>
-            <ul class="list">
+            <a href="#"><img class="footer__logo" src="css/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="logo_ohmyfood"></a>
+            <ul class="footer__list">
                 <li><i class="fa fa-phone fonc--ico"></i>Proposer un restaurant</li>
                 <li><i class="fa fa-list fonc--ico"></i>Devenir un partenaire</li>
                 <li>Mentions légales</li>

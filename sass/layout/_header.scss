@@ -1,0 +1,15 @@
+.header {
+    background: $colour-white;
+    height: auto;
+    display: flex;
+    align-items: space-between;
+    flex-flow: column wrap;
+    width: 100%;
+    box-shadow: 0px 3px 5px 0 rgb(0 0 0 / 20%);
+    margin-bottom: 20px;
+    &__logo {
+        color: $colour-black;
+        padding: 2rem;
+        width: 220px;
+    }
+}

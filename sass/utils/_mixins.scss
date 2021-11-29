@@ -1,0 +1,7 @@
+@mixin button-bg($colour:lightness-shift($colour-primary), $offset: $heading-shadow-size){
+    background-color: $offset $offset $colour;
+}
+
+@mixin header-shadow($colour:$colour-black){
+    box-shadow: 0 3px $colour;
+}

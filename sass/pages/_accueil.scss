@@ -1,0 +1,108 @@
+.home {
+    width: 100%;
+    padding: $grid-gutter;
+    margin-bottom: $grid-gutter;
+    &__city {
+        background-color:#C0C0C0;
+        text-align: center;
+        padding: $grid-gutter;
+        display: flex;
+        justify-content: center;
+    }
+        &__neighb {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        font-weight: bold;
+        }
+        &__ic--search {
+            display: inline;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+            padding: 0 1rem;
+        }
+    &__pres {
+        text-align: center ;
+        padding: $grid-gutter*3 $grid-gutter*3 $grid-gutter*5 $grid-gutter*3 ;
+        & .pres--title {
+            margin-bottom: $grid-gutter*1;
+        } 
+        & .pres--desc {
+            font-size: 1.5rem;
+            margin-bottom: $grid-gutter*2.25;
+        } 
+        & .pres--button {
+            padding: $grid-gutter;
+            background: linear-gradient(#FF79DA, #9356DC);
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1.2rem;
+
+           /* @include btn;*/
+        }      
+    }
+    &__filter {
+        background-color:$colour-white;
+        padding-left: $grid-gutter;
+        & .section--title {
+            padding: $grid-gutter;
+            margin-bottom: $grid-gutter*1;
+        } 
+        & .list{
+            background-color:$colour-primary;
+        } 
+        & .pres--button {
+            background: $colour-bg;
+            border-radius: 15px;
+            color: $colour-black;
+            font-weight: bold;
+            font-size: 1.4rem;
+            width: 90%;
+            padding: $grid-gutter*1.5;
+            margin: $grid-gutter*1;
+           /* @include btn--filter;*/
+            /*A AJOUTER selection couleur violette diluee*/
+            & i {
+                padding: $grid-gutter*1 $grid-gutter*1;
+            } 
+        }      
+    }
+
+    &__resto {
+        padding-left: $grid-gutter;
+        & .section--title {
+            padding: $grid-gutter;
+            margin-bottom: $grid-gutter*1;
+        } 
+        & .resto--card{
+            background-color:$colour-white;
+            /*@include btn--filter;*/
+        }      
+    }
+
+    &__pic {
+        overflow:hidden;
+        width: 80%;
+        border-radius: 1000rem;
+        border: 1.5rem solid $colour-primary;
+        & img {
+            display: block;
+            width: 100%;
+        }
+    }
+    &__copy {
+        grid-area: copy;
+        & p{
+            line-height: 2rem*1.2;
+            margin-bottom: $grid-gutter*2.25;
+        } 
+    }
+    &__btn{
+        /* @include btn;*/
+        padding: $grid-gutter;
+        grid-area: btn;
+        & a {
+            text-decoration: none;
+        }
+    }
+}
