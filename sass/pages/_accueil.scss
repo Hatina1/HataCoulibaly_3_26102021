@@ -3,106 +3,137 @@
     padding: $grid-gutter;
     margin-bottom: $grid-gutter;
     &__city {
-        background-color:#C0C0C0;
+        background-color:#E5E5E5;
         text-align: center;
-        padding: $grid-gutter;
+        padding: $grid-gutter*1;
         display: flex;
         justify-content: center;
     }
         &__neighb {
-        font-size: 1.5rem;
-        margin-bottom: 10px;
-        font-weight: bold;
+        font-size: 1.1rem;
+        font-weight: 500;
         }
-        &__ic--search {
+        &__ic--map {
             display: inline;
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            font-weight: bold;
+            font-size: 1.1rem;
             padding: 0 1rem;
         }
     &__pres {
         text-align: center ;
-        padding: $grid-gutter*3 $grid-gutter*3 $grid-gutter*5 $grid-gutter*3 ;
+        padding: 0 0 $grid-gutter*4 0 ;
         & .pres--title {
-            margin-bottom: $grid-gutter*1;
+            margin-bottom: $grid-gutter*0.5;
+            padding: 2.5rem 3rem 0 3rem;
         } 
         & .pres--desc {
-            font-size: 1.5rem;
-            margin-bottom: $grid-gutter*2.25;
+            font-size: 1.3rem;
+            margin-bottom: $grid-gutter*2;
+            line-height: 1;
+            color: #524b4b;
         } 
         & .pres--button {
-            padding: $grid-gutter;
+            padding: $grid-gutter*1.1 $grid-gutter*1.7;
             background: linear-gradient(#FF79DA, #9356DC);
+            border: 1px solid currentColor;
             border-radius: 25px;
-            font-weight: bold;
-            font-size: 1.2rem;
+            font-weight: 500;
+            font-size: 1.1rem;
 
            /* @include btn;*/
         }      
     }
     &__filter {
         background-color:$colour-white;
-        padding-left: $grid-gutter;
+        padding: $grid-gutter*2 0 $grid-gutter*3 0;
         & .section--title {
             padding: $grid-gutter;
-            margin-bottom: $grid-gutter*1;
+            margin-bottom: $grid-gutter*1;  
         } 
         & .list{
-            background-color:$colour-primary;
+            list-style-type:circle;
         } 
         & .pres--button {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
             background: $colour-bg;
-            border-radius: 15px;
+            border: 1px solid #f0f0f0;
+            border-radius: 22px;
             color: $colour-black;
             font-weight: bold;
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             width: 90%;
-            padding: $grid-gutter*1.5;
-            margin: $grid-gutter*1;
-           /* @include btn--filter;*/
+            padding: $grid-gutter*1.8;
+            margin: 0 $grid-gutter*1.5 $grid-gutter*1.8 $grid-gutter*1.8; 
+            box-shadow: 1px 3px 5px 0 rgb(0 0 0 / 20%);
             /*A AJOUTER selection couleur violette diluee*/
             & i {
-                padding: $grid-gutter*1 $grid-gutter*1;
+                font-size: $grid-gutter*1.1;
+                color: #7a7676;
             } 
         }      
     }
 
     &__resto {
-        padding-left: $grid-gutter;
+        padding: $grid-gutter*3 0 $grid-gutter*5 0;
         & .section--title {
             padding: $grid-gutter;
             margin-bottom: $grid-gutter*1;
         } 
         & .resto--card{
             background-color:$colour-white;
+            width: 90%;
+            margin: 1rem;
+            border-radius: 12px;
             /*@include btn--filter;*/
-        }      
-    }
-
-    &__pic {
-        overflow:hidden;
-        width: 80%;
-        border-radius: 1000rem;
-        border: 1.5rem solid $colour-primary;
-        & img {
-            display: block;
-            width: 100%;
-        }
-    }
-    &__copy {
-        grid-area: copy;
-        & p{
-            line-height: 2rem*1.2;
-            margin-bottom: $grid-gutter*2.25;
+        
+            & a{
+                text-decoration: none;
+                position: relative;
+                display: inline-block;
+                height: 12rem;
+                width: 100%;
+            }  
+            & img{
+                width: 100%;
+                height: 12rem;
+            }  
+        } 
+            & .resto--badge{
+                position: absolute;
+                z-index: 5; 
+                color: #59ad98;
+                background-color:#99E2D0;
+                top: 5%;
+                right: 5%;
+            } 
+        & .resto--desc{
+            text-align: start;
+            height: 3.5rem;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-content: space-between;
+            & div{
+                display: flex;
+                flex-flow:  column wrap;
+            }
+            & i{
+                padding-right:1rem;
+            }
+        }  
+        & .resto--name{
+            font-weight: 900;
+            font-size: 1.2rem;
+        } 
+        & .resto--city{
+            font-size: 1.2rem;
+            line-height: 1;
+            color: #524b4b;
+        } 
+        & .ic-heart--resto{
+            font-size: 1.5rem;
         } 
     }
-    &__btn{
-        /* @include btn;*/
-        padding: $grid-gutter;
-        grid-area: btn;
-        & a {
-            text-decoration: none;
-        }
-    }
+   
 }

@@ -36,7 +36,7 @@ body {
 h1 {
   font-family: "Shrikhand", sans-serif;
   font-weight: 900;
-  font-size: 2rem;
+  font-size: 1.7rem;
   /*21px*/
   color: #2a2a2a;
   font-style: normal;
@@ -45,7 +45,7 @@ h1 {
 h2 {
   font-family: "Shrikhand", sans-serif;
   font-weight: 900;
-  font-size: 2rem;
+  font-size: 1.7rem;
   /*21px*/
   color: #2a2a2a;
   font-style: normal;
@@ -59,12 +59,10 @@ li {
   font-size: 1rem;
 }
 
-footer {
-  list-style-type: none;
-  font-family: "Roboto", sans-serif;
+p {
+  display: inline-block;
   font-weight: 500;
-  font-size: 1rem;
-  color: #fff;
+  font-size: 1.1rem;
 }
 
 button {
@@ -82,27 +80,35 @@ button {
   flex-flow: column wrap;
   width: 100%;
   box-shadow: 0px 3px 5px 0 rgba(0, 0, 0, 0.2);
-  margin-bottom: 20px;
+  margin-bottom: 2px;
 }
 .header__logo {
   color: #2a2a2a;
-  padding: 2rem;
-  width: 220px;
+  padding: 1.5rem 1rem 0.5rem 1rem;
+  height: 48px;
 }
 
-.footer {
+footer {
   background: #2a2a2a;
   color: #fff;
-  height: 6rem;
-  width: 100%;
 }
-.footer__logo {
-  font-size: 1rem;
+footer .footer__logo {
+  color: #fff;
+  padding: 1rem;
+  width: 200px;
+}
+footer .footer__list {
   margin: 1rem;
 }
-.footer__list {
-  font-size: 1rem;
-  margin: 1rem;
+footer li {
+  text-align: start;
+}
+footer i {
+  padding: 0 0.5rem;
+}
+footer .footer__item {
+  font-weight: normal;
+  font-size: 1.1rem;
 }
 
 .home {
@@ -111,71 +117,77 @@ button {
   margin-bottom: 1rem;
 }
 .home__city {
-  background-color: #C0C0C0;
+  background-color: #E5E5E5;
   text-align: center;
   padding: 1rem;
   display: flex;
   justify-content: center;
 }
 .home__neighb {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  font-weight: bold;
+  font-size: 1.1rem;
+  font-weight: 500;
 }
-.home__ic--search {
+.home__ic--map {
   display: inline;
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  font-weight: bold;
+  font-size: 1.1rem;
   padding: 0 1rem;
 }
 .home__pres {
   text-align: center;
-  padding: 3rem 3rem 5rem 3rem;
+  padding: 0 0 4rem 0;
 }
 .home__pres .pres--title {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  padding: 2.5rem 3rem 0 3rem;
 }
 .home__pres .pres--desc {
-  font-size: 1.5rem;
-  margin-bottom: 2.25rem;
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  line-height: 1;
+  color: #524b4b;
 }
 .home__pres .pres--button {
-  padding: 1rem;
+  padding: 1.1rem 1.7rem;
   background: linear-gradient(#FF79DA, #9356DC);
+  border: 1px solid currentColor;
   border-radius: 25px;
-  font-weight: bold;
-  font-size: 1.2rem;
+  font-weight: 500;
+  font-size: 1.1rem;
   /* @include btn;*/
 }
 .home__filter {
   background-color: #fff;
-  padding-left: 1rem;
+  padding: 2rem 0 3rem 0;
 }
 .home__filter .section--title {
   padding: 1rem;
   margin-bottom: 1rem;
 }
 .home__filter .list {
-  background-color: #9356DC;
+  list-style-type: circle;
 }
 .home__filter .pres--button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   background: #f0f0f0;
-  border-radius: 15px;
+  border: 1px solid #f0f0f0;
+  border-radius: 22px;
   color: #2a2a2a;
   font-weight: bold;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   width: 90%;
-  padding: 1.5rem;
-  margin: 1rem;
-  /* @include btn--filter;*/
+  padding: 1.8rem;
+  margin: 0 1.5rem 1.8rem 1.8rem;
+  box-shadow: 1px 3px 5px 0 rgba(0, 0, 0, 0.2);
   /*A AJOUTER selection couleur violette diluee*/
 }
 .home__filter .pres--button i {
-  padding: 1rem 1rem;
+  font-size: 1.1rem;
+  color: #7a7676;
 }
 .home__resto {
-  padding-left: 1rem;
+  padding: 3rem 0 5rem 0;
 }
 .home__resto .section--title {
   padding: 1rem;
@@ -183,30 +195,54 @@ button {
 }
 .home__resto .resto--card {
   background-color: #fff;
+  width: 90%;
+  margin: 1rem;
+  border-radius: 12px;
   /*@include btn--filter;*/
 }
-.home__pic {
-  overflow: hidden;
-  width: 80%;
-  border-radius: 1000rem;
-  border: 1.5rem solid #9356DC;
-}
-.home__pic img {
-  display: block;
+.home__resto .resto--card a {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  height: 12rem;
   width: 100%;
 }
-.home__copy {
-  grid-area: copy;
+.home__resto .resto--card img {
+  width: 100%;
+  height: 12rem;
 }
-.home__copy p {
-  line-height: 2.4rem;
-  margin-bottom: 2.25rem;
+.home__resto .resto--badge {
+  position: absolute;
+  z-index: 5;
+  color: #59ad98;
+  background-color: #99E2D0;
+  top: 5%;
+  right: 5%;
 }
-.home__btn {
-  /* @include btn;*/
-  padding: 1rem;
-  grid-area: btn;
+.home__resto .resto--desc {
+  text-align: start;
+  height: 3.5rem;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-content: space-between;
 }
-.home__btn a {
-  text-decoration: none;
+.home__resto .resto--desc div {
+  display: flex;
+  flex-flow: column wrap;
+}
+.home__resto .resto--desc i {
+  padding-right: 1rem;
+}
+.home__resto .resto--name {
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+.home__resto .resto--city {
+  font-size: 1.2rem;
+  line-height: 1;
+  color: #524b4b;
+}
+.home__resto .ic-heart--resto {
+  font-size: 1.5rem;
 }

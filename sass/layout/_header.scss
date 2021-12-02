@@ -6,10 +6,10 @@
     flex-flow: column wrap;
     width: 100%;
     box-shadow: 0px 3px 5px 0 rgb(0 0 0 / 20%);
-    margin-bottom: 20px;
+    margin-bottom: 2px;
     &__logo {
         color: $colour-black;
-        padding: 2rem;
-        width: 220px;
+        padding: 1.5rem 1rem 0.5rem 1rem;
+        height: 48px;
     }
 }

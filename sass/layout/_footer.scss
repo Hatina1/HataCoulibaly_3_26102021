@@ -1,14 +1,25 @@
-.footer {
+footer {
     background: $colour-black;
-    color: $colour-white;
-    height: 6rem;
-    width: 100%;   
-    &__logo {
-        font-size: 1rem;
+    color: $colour-white;   
+    & .footer__logo {
+        color: $colour-white;
+        padding: 1rem;
+        width: 200px;
+    } 
+    & .footer__list {
         margin: 1rem;
     }
-    &__list {
-        font-size: 1rem;
-        margin: 1rem;
+
+    & li {
+        text-align: start;
+    }
+
+    & i {
+        padding: 0 0.5rem;
+    }
+
+    & .footer__item{
+        font-weight: normal;
+        font-size: 1.1rem;
     }
 }
