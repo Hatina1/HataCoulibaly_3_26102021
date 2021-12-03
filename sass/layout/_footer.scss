@@ -1,13 +1,14 @@
 footer {
     background: $colour-black;
     color: $colour-white;   
+    text-align: start;
     & .footer__logo {
-        color: $colour-white;
-        padding: 1rem;
-        width: 200px;
+        padding: 1.5rem 1rem 0.5rem 1rem;
+        height: 30px;
+        filter: invert(100%) sepia(0%) saturate(7%) hue-rotate(163deg) brightness(103%) contrast(102%);
     } 
     & .footer__list {
-        margin: 1rem;
+        margin: 0 1rem;
     }
 
     & li {
