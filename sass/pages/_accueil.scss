@@ -1,38 +1,38 @@
 .home {
     width: 100%;
-    padding: $grid-gutter;
-    margin-bottom: $grid-gutter;
-    &__city {
+    padding: $m-ref;
+    margin-bottom: $m-ref;
+    &-city {
         background-color:#E5E5E5;
         text-align: center;
-        padding: $grid-gutter*1;
+        padding: $m-ref*1;
         display: flex;
         justify-content: center;
     }
-        &__neighb {
+        &-neighb {
         font-size: 1.1rem;
         font-weight: 500;
         }
-        &__ic--map {
+        &-ic-map {
             display: inline;
             font-size: 1.1rem;
             padding: 0 1rem;
         }
-    &__pres {
+    &-top {
         text-align: center ;
-        padding: 0 0 $grid-gutter*4 0 ;
-        & .pres--title {
-            margin-bottom: $grid-gutter*0.5;
+        padding: 0 0 $m-ref*4 0 ;
+        & .top-title {
+            margin-bottom: $m-ref*0.5;
             padding: 2.5rem 3rem 0 3rem;
         } 
-        & .pres--desc {
+        & .top-desc {
             font-size: 1.3rem;
-            margin-bottom: $grid-gutter*2;
+            margin-bottom: $m-ref*2;
             line-height: 1;
             color: #524b4b;
         } 
-        & .pres--button {
-            padding: $grid-gutter*1.1 $grid-gutter*1.7;
+        & .top-button {
+            padding: $m-ref*1.1 $m-ref*1.7;
             background: linear-gradient($colour-secondary, $colour-primary);
             border: 1px solid currentColor;
             border-radius: 25px;
@@ -42,19 +42,19 @@
            /* @include btn;*/
         }      
     }
-    &__filter {
+    &-filter {
         background-color:$colour-white;
-        padding: $grid-gutter*2 0 $grid-gutter*3 0;
-        & .section--title {
-            padding: $grid-gutter;
-            margin-bottom: $grid-gutter*1;  
+        padding: $m-ref*2 0 $m-ref*3 0;
+        & .section-title {
+            padding: $m-ref;
+            margin-bottom: $m-ref*1;  
         } 
         & .list{
             list-style-type:circle;
         } 
-        & .pres--button {
+        & .filter-button {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
             align-items: center;
             background: $colour-bg;
             border: 1px solid #f0f0f0;
@@ -63,27 +63,30 @@
             font-weight: bold;
             font-size: 1.3rem;
             width: 90%;
-            padding: $grid-gutter*1.8;
-            margin: 0 $grid-gutter*1.5 $grid-gutter*1.8 $grid-gutter*1.8; 
+            padding: $m-ref*1.8;
+            margin: 0 $m-ref*1.5 $m-ref*1.8 $m-ref*1.8; 
             box-shadow: 1px 3px 5px 0 rgb(0 0 0 / 20%);
             &:hover {
-                background-color: (147,86,220,0.5)/* rgb de colour-primary #9356DC*/;
+                background-color: rgba(147,86,220,0.2)/* rgb de colour-primary #9356DC*/;
+                &i:hover {
+                    color: $colour-primary;
+                } 
             } 
             & span {
-                font-size: $grid-gutter*1.1;
+                font-size: $m-ref*1.1;
                 color: $colour-white;
                 background-color: $colour-primary;
                 border-radius: 50%;
-                width: $grid-gutter*1.8;
-                height: $grid-gutter*1.8;
+                width: $m-ref*1.8;
+                height: $m-ref*1.8;
                 z-index: 3;
                 margin-left: -30px;
-                line-height: $grid-gutter*1.8;
+                line-height: $m-ref*1.8;
             }
             & i {
-                font-size: $grid-gutter*1.1;
+                font-size: $m-ref*1.1;
                 color: $colour-black;
-             
+                padding: 0 $m-ref*2;
                 &:hover {
                     color: $colour-primary;
                 } 
@@ -92,18 +95,18 @@
             
     }
 
-    &__resto {
-        padding: $grid-gutter*3 0 $grid-gutter*5 0;
-        & .section--title {
-            padding: $grid-gutter;
-            margin-bottom: $grid-gutter*1;
+    &-card {
+        padding: $m-ref*3 0 $m-ref*5 0;
+        & .section-title {
+            padding: $m-ref;
+            margin-bottom: $m-ref*1;
         } 
-        & .resto--card{
+        & .card{
             background-color:$colour-white;
             width: 90%;
             margin: 1rem;
             border-radius: 12px;
-            /*@include btn--filter;*/
+            /*@include btn-filter;*/
         
             & a{
                 text-decoration: none;
@@ -119,7 +122,7 @@
                 object-position: 100% 90%;
             }  
         } 
-            & .resto--badge{
+            & .card-badge{
                 position: absolute;
                 z-index: 5; 
                 color: #59ad98;
@@ -127,7 +130,7 @@
                 top: 5%;
                 right: 5%;
             } 
-        & .resto--desc{
+        & .card-desc{
             text-align: start;
             height: 3.5rem;
             display: flex;
@@ -149,17 +152,18 @@
                 }
             }
         }  
-        & .resto--name{
+        & .card-name{
             font-weight: 900;
             font-size: 1.2rem;
         } 
-        & .resto--city{
+        & .card-city{
             font-size: 1.2rem;
             line-height: 1;
             color: #524b4b;
         } 
-        & .ic-heart--resto{
+        & .ic-heart-card{
             font-size: 1.5rem;
+            cursor: pointer;
         } 
     }
    

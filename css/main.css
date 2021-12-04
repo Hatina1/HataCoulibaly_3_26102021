@@ -169,7 +169,7 @@ footer .footer__item {
 }
 .home__filter .pres--button {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   background: #f0f0f0;
   border: 1px solid #f0f0f0;
@@ -183,7 +183,10 @@ footer .footer__item {
   box-shadow: 1px 3px 5px 0 rgba(0, 0, 0, 0.2);
 }
 .home__filter .pres--button:hover {
-  background-color: 147, 86, 220, 0.5;
+  background-color: rgba(147, 86, 220, 0.2);
+}
+.home__filter .pres--button:hoveri:hover {
+  color: #9356DC;
 }
 .home__filter .pres--button span {
   font-size: 1.1rem;
@@ -199,6 +202,7 @@ footer .footer__item {
 .home__filter .pres--button i {
   font-size: 1.1rem;
   color: #2a2a2a;
+  padding: 0 2rem;
 }
 .home__filter .pres--button i:hover {
   color: #9356DC;
