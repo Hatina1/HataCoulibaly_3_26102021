@@ -5,3 +5,19 @@
 @mixin header-shadow($colour:$colour-black){
     box-shadow: 0 3px $colour;
 }
+
+@mixin ic-heart {
+    
+    opacity: 0.6;
+    font-size: 1.7rem;
+    cursor:pointer;
+}
+
+/* @keyframes heart {
+    0%   {
+        background-color: $colour-primary;
+    }
+    50%   {
+        background-color: $colour-primary;
+    }
+} */

@@ -38,8 +38,7 @@
             border-radius: 25px;
             font-weight: 500;
             font-size: 1.1rem;
-
-           /* @include btn;*/
+            color: #f0f0f0;
         }      
     }
     &-filter {
@@ -68,9 +67,6 @@
             box-shadow: 1px 3px 5px 0 rgb(0 0 0 / 20%);
             &:hover {
                 background-color: rgba(147,86,220,0.2)/* rgb de colour-primary #9356DC*/;
-                &i:hover {
-                    color: $colour-primary;
-                } 
             } 
             & span {
                 font-size: $m-ref*1.1;
@@ -120,15 +116,23 @@
                 height: 12rem;
                 object-fit: cover; 
                 object-position: 100% 90%;
+                border-radius: 12px 12px 0 0;
+            }
+            & img:nth-child(2){
+                object-position: center;
             }  
         } 
             & .card-badge{
                 position: absolute;
                 z-index: 5; 
-                color: #59ad98;
+                color: darken($color: #99E2D0, $amount: 40%);
                 background-color:#99E2D0;
                 top: 5%;
                 right: 5%;
+                padding: $m-ref*0.5 $m-ref*0.7;
+                font-size: $m-ref*0.9;
+                font-weight: 600;
+                border-radius: 2px;
             } 
         & .card-desc{
             text-align: start;
@@ -137,21 +141,40 @@
             flex-flow: column wrap;
             justify-content: center;
             align-content: space-between;
-            & div{
-                display: flex;
-                flex-flow:  column wrap;
-            }
-            & i{
-                padding-right:1rem;
-                background-color: $colour-white;
-                &:hover{
-                    background-color: $colour-primary;
-                }
-                &:active{
-                    background-color: $colour-primary;
-                }
-            }
-        }  
+            padding: 2rem 1rem 2.8rem 1rem;
+        }
+        & .card-desc-title{
+            display: flex;
+            flex-flow:  column wrap;
+            line-height: $m-ref*2.2;
+        }
+        & .card-desc-icon{
+            position: relative;
+            line-height: $m-ref*2.2;
+            top: -10px;
+            left: -30px;
+        }
+
+        & .card-desc-icon::before {
+            position: absolute;
+            @include ic-heart;
+            content: "\f004";  /* this is your text. You can also use UTF-8 character codes as I do here */
+            font-family: "Font Awesome 5 Free";
+            font-weight: 400;
+        }
+        & .card-desc-icon:hover::before{
+            position: absolute;
+            @include ic-heart;
+            content: "\f004";  /* this is your text. You can also use UTF-8 character codes as I do here */
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            opacity: 1;
+            color: $colour-primary;
+            transition: color 300ms ease-in-out;
+            transform-origin: center center;
+
+        }
+
         & .card-name{
             font-weight: 900;
             font-size: 1.2rem;
@@ -159,12 +182,7 @@
         & .card-city{
             font-size: 1.2rem;
             line-height: 1;
-            color: #524b4b;
-        } 
-        & .ic-heart-card{
-            font-size: 1.5rem;
-            cursor: pointer;
+            opacity: 0.6;
         } 
     }
-   
 }
