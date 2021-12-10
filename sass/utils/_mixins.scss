@@ -13,11 +13,31 @@
     cursor:pointer;
 }
 
-/* @keyframes heart {
+@keyframes home{
+    0% {
+        transform: translateX(-9999px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+} 
+
+@keyframes loader {
     0%   {
-        background-color: $colour-primary;
+        transform: rotate(0);
     }
-    50%   {
-        background-color: $colour-primary;
+    100%  {
+        /* width:0;
+        height:0;
+        visibility:hidden; */
+        transform: rotate(360deg);
+    }  
+} 
+
+@keyframes menu_item {
+    0% {
+        transform: translateY(50%);
     }
-} */
+}
+    
+    

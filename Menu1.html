@@ -4,138 +4,169 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/font-awesome/css/all.min.css">
-        <link rel="stylesheet" href="css/styles.css">
+        <script src="https://kit.fontawesome.com/dafb594cfc.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/main.css">
         <title>Oh my Good - Reservations</title>
     </head>
 
     <body>
         <!-- HEADER ajout de l'icone retour-->
-        <header>
-            <i class="fa fa-arrow fonc--ico"></i>
-            <a href="#"><img class="logo" src="css/images/logo/ohmyfood.png"  alt="logo_ohmyfood"></a>
+        <header class="header">
+            <div class="header-arrow-back"><i class="fas fa-arrow-left"></i></div>
+            <a href="#"><img class="header-logo" src="css/images/logo/ohmyfood.png"  alt="logo_ohmyfood"></a>
         </header> 
-        <div class="menu-img">
-            <img src="css/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"  alt="Palette du goût">
-        </div>
-        <div class="resto--desc">
-            <p class="resto--name"> La palette du goût </p>
-            <i class="fa fa-heart fonc--ico"></i>
-         </div>
-         <!--Section ENTREES-->
-         <div class="menu--cat"> 
-            <h2 class="cat--name">ENTRÉES</h2>
-            <div class="menu--card">
-                <p class="card--title"> Fricassée d'escargot </p>
-                <div class="card--desc--price">
-                    <p class="card--desc"> Au piment d'espelette</p>
-                    <p class="card--price">25€</p>
-                </div>
-                <div class="card--ok">
-                    <i class="fa fa-check fonc--ico"></i>
+        <main class="menu">
+            <div class="card">
+                <div class="card-img">
+                    <img src="css/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"  alt="Palette du goût">
+                </div>   
+                <div class="card-content">
+                    <div class="card-top">
+                        <h1 class="card-top-title"> La palette du goût </h1>
+                        <div class="ic-heart"></div>
+                    </div>
+                    <!--Section ENTREES-->
+                    <article class="card-menu-dish"> 
+                        <h2 class="card-menu-title">ENTRÉES</h2>
+                        <div class="card-menu-title-border"></div>
+                        <!-- dishes names and descriptions -->
+                        <div class="card-menu card-menu-1">
+                            <div class="card-menu-wrapper">
+                                <p class="card-menu-name"> Fricassée d'escargot </p>
+                                <div class="card-menu-desc-name">
+                                    <p class="card-menu-desc"> Au piment d'espelette</p>
+                                    <p class="card-menu-price">25€</p>
+                                </div>
+                            </div>
+                            <div class="card-menu-ok"> <i class="fa fa-check"></i></div>
+                        </div>
+                        <!-- dishes names and descriptions -->
+                        <div class="card-menu card-menu-2">
+                            <div class="card-menu-wrapper">
+                                <p class="card-menu-name"> Fricassée d'escargot </p>
+                                <div class="card-menu-desc-name">
+                                    <p class="card-menu-desc"> Au piment d'espelette</p>
+                                    <p class="card-menu-price">25€</p>
+                                </div>
+                            </div>
+                            <div class="card-menu-ok"> <i class="fa fa-check"></i></div>
+                        </div>
+                        <!-- dishes names and descriptions -->
+                        <div class="card-menu card-menu-3">
+                            <div class="card-menu-wrapper">
+                                <p class="card-menu-name"> Fricassée d'escargot </p>
+                                <div class="card-menu-desc-name">
+                                    <p class="card-menu-desc"> Au piment d'espelette</p>
+                                    <p class="card-menu-price">25€</p>
+                                </div>
+                            </div>
+                            <div class="card-menu-ok"> <i class="fa fa-check"></i></div>
+                        </div>
+                    </article>
+                    <!--Section PLATS--> 
+                    <article class="card-menu-dish">
+                        <h2 class="card-menu-title">PLATS</h2>
+                        <div class="card-menu-title-border"></div>
+                        <!-- dishes names and descriptions -->
+                        <div class="card-menu">
+                            <div class="card-menu-wrapper">
+                                <p class="card-menu-name"> Fricassée d'escargot </p>
+                                <div class="card-menu-desc-name">
+                                    <p class="card-menu-desc"> Au piment d'espelette</p>
+                                    <p class="card-menu-price">25€</p>
+                                </div>
+                            </div>
+                            <div class="card-menu-ok"> <i class="fa fa-check"></i></div>
+                        </div>
+                        <!-- dishes names and descriptions -->
+                        <div class="card-menu">
+                            <div class="card-menu-wrapper">
+                                <p class="card-menu-name"> Fricassée d'escargot </p>
+                                <div class="card-menu-desc-name">
+                                    <p class="card-menu-desc"> Au piment d'espelette</p>
+                                    <p class="card-menu-price">25€</p>
+                                </div>
+                            </div>
+                            <div class="card-menu-ok"> <i class="fa fa-check"></i></div>
+                        </div>
+                        <!-- dishes names and descriptions -->
+                        <div class="card-menu">
+                            <div class="card-menu-wrapper">
+                                <p class="card-menu-name"> Fricassée d'escargot </p>
+                                <div class="card-menu-desc-name">
+                                    <p class="card-menu-desc"> Au piment d'espelette</p>
+                                    <p class="card-menu-price">25€</p>
+                                </div>
+                            </div>
+                            <div class="card-menu-ok"> <i class="fa fa-check"></i></div>
+                        </div>
+                    </article>
+                    <!--Section DESSERTS-->
+                    <article class="card-menu-dish"> 
+                        <h2 class="card-menu-title">DESSERTS</h2>
+                        <div class="card-menu-title-border"></div>
+                        <!-- dishes names and descriptions -->
+                        <div class="card-menu">
+                            <div class="card-menu-wrapper">
+                                <p class="card-menu-name"> Fricassée d'escargot </p>
+                                <div class="card-menu-desc-name">
+                                    <p class="card-menu-desc"> Au piment d'espelette</p>
+                                    <p class="card-menu-price">25€</p>
+                                </div>
+                            </div>
+                            <div class="card-menu-ok"> <i class="fa fa-check"></i></div>
+                        </div>
+                        <!-- dishes names and descriptions -->
+                        <div class="card-menu">
+                            <div class="card-menu-wrapper">
+                                <p class="card-menu-name"> Fricassée d'escargot </p>
+                                <div class="card-menu-desc-name">
+                                    <p class="card-menu-desc"> Au piment d'espelette</p>
+                                    <p class="card-menu-price">25€</p>
+                                </div>
+                            </div>
+                            <div class="card-menu-ok"> <i class="fa fa-check"></i></div>
+                        </div>
+                        <!-- dishes names and descriptions -->
+                        <div class="card-menu">
+                            <div class="card-menu-wrapper">
+                                <p class="card-menu-name"> Fricassée d'escargot </p>
+                                <div class="card-menu-desc-name">
+                                    <p class="card-menu-desc"> Au piment d'espelette</p>
+                                    <p class="card-menu-price">25€</p>
+                                </div>
+                            </div>
+                            <div class="card-menu-ok"> <i class="fa fa-check"></i></div>
+                        </div>
+                    </article>
+                    <!-- BUTTON-->
+                    <button class="card-menu-button"> 
+                        Commander 
+
+                    </button>
                 </div>
             </div>
-            <div class="menu--card">
-                <p class="card--title"> Foie gras de canard mi-cuit </p>
-                <div class="card--desc--price">
-                    <p class="card--desc"> Et ses copeaux de truffe noire</p>
-                    <p class="card--price">35€</p>
-                </div>
-                <div class="card--ok">
-                    <i class="fa fa-check fonc--ico"></i>
-                </div>
-            </div>
-            <div class="menu--card">
-                <p class="card--title"> Oeuf au plat </p>
-                <div class="card--desc--price">
-                    <p class="card--desc"> Assaisonné à la truffe sur lit de caviar</p>
-                    <p class="card--price">20€</p>
-                </div>
-                <div class="card--ok">
-                    <i class="fa fa-check fonc--ico"></i>
-                </div>
-            </div> 
-         </div>
-         <!--Section PLATS--> 
-         <div class="menu--cat">
-            <h2 class="cat--name">PLATS</h2>
-            <div class="menu--card">
-                <p class="card--title"> Filet de boeuf aux herbes </p>
-                <div class="card--desc--price">
-                    <p class="card--desc"> Accompagné de sa ribambelle de légumes</p>
-                    <p class="card--price">40€</p>
-                </div>
-                <div class="card--ok">
-                    <i class="fa fa-check fonc--ico"></i>
-                </div>
-            </div>
-            <div class="menu--card">
-                <p class="card--title"> Parmentier de queue de boeuf </p>
-                <div class="card--desc--price">
-                    <p class="card--desc"> A la truffe noire sur sa purée de panais</p>
-                    <p class="card--price">35€</p>
-                </div>
-                <div class="card--ok">
-                    <i class="fa fa-check fonc--ico"></i>
-                </div>
-            </div>
-            <div class="menu--card">
-                <p class="card--title"> Filet de Turbot </p>
-                <div class="card--desc--price">
-                    <p class="card--desc"> Aux agrumes</p>
-                    <p class="card--price">44€</p>
-                </div>
-                <div class="card--ok">
-                    <i class="fa fa-check fonc--ico"></i>
-                </div>
-            </div> 
-         </div>
-         <!--Section DESSERTS-->
-         <div class="menu--cat"> 
-            <h2 class="cat--name">DESSERTS</h2>
-            <div class="menu--card">
-                <p class="card--title"> Paris-Brest </p>
-                <div class="card--desc--price">
-                    <p class="card--desc"> Revisité</p>
-                    <p class="card--price">18€</p>
-                </div>
-                <div class="card--ok">
-                    <i class="fa fa-check fonc--ico"></i>
-                </div>
-            </div>
-            <div class="menu--card">
-                <p class="card--title"> Macaron au chocolat d'exception </p>
-                <div class="card--desc--price">
-                    <p class="card--desc"> Et glace à la vanille de Madagascar</p>
-                    <p class="card--price">22€</p>
-                </div>
-                <div class="card--ok">
-                    <i class="fa fa-check fonc--ico"></i>
-                </div>
-            </div>
-            <div class="menu--card">
-                <p class="card--title"> Mousse au chocolat </p>
-                <div class="card--desc--price">
-                    <p class="card--desc"> Au piment d'espelette et à la truffe noire</p>
-                    <p class="card--price">23€</p>
-                </div>
-                <div class="card--ok">
-                    <i class="fa fa-check fonc--ico"></i>
-                </div>
-            </div> 
-         </div>
-         <!-- BOUTON-->
-         <button class="pres--button"> Commander </button>
+        </main>
+        
          <!-- FOOTER-->
-        <footer class="footer--border">
-            <a href="#"><img class="footer__logo" alt="logo_ohmyfood"></a>
-            <ul class="footer__list">
-                <li><i class="fa fa-phone fonc--ico"></i>Proposer un restaurant</li>
-                <li><i class="fa fa-list fonc--ico"></i>Devenir un partenaire</li>
-                <li>Mentions légales</li>
-                <li>Contact</li>
+         <footer>
+            <a href="#"><img class="footer-logo" src="css/images/logo/ohmyfood@2x.svg"  alt="logo_ohmyfood"></a>
+            <ul class="footer-list">
+                <li>
+                    <i class="fa fa-cutlery ic-heart"></i>
+                    <p class="footer-item">Proposer un restaurant</p>
+                </li>
+                <li>
+                    <i class="fa fa-handshake ic-heart"></i>
+                    <p class="footer-item">Devenir un partenaire</p>
+                </li>
+                <li>
+                    <p class="footer-item">Mentions légales</p>
+                </li>
+                <li>
+                    <p class="footer-item">Contact</p>
+                </li>
             </ul>
         </footer> 
-
     </body>
 </html>

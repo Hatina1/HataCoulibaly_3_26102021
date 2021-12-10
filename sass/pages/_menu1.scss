@@ -1,0 +1,160 @@
+.card {
+    background-color: $colour-bg;
+    & img{
+        width: 100%;
+        height: 20rem;
+        object-fit: cover; 
+        border-radius: 0;
+    } 
+   
+    &-content {
+        margin-bottom: 30px;
+    }
+
+    &-top {
+        display: flex;
+        border-radius: 40px 40px 0 0;
+        width: 100%;
+        margin-top: -50px;
+        align-items: center;
+        background-color: $colour-bg;
+        overflow: overlay;
+        &-title {
+            font-family: 'Shrikhand', cursive;
+            font-size: 2rem;
+            padding: 2rem 1.5rem;
+            }
+    
+        & .ic-heart{
+            position: relative;
+            line-height: $m-ref*2.2;
+            top: -10px;
+            left: 10px;
+            }
+        & .ic-heart::before {
+            position: absolute;
+            @include ic-heart;
+            content: "\f004";  /* this is your text. You can also use UTF-8 character codes as I do here */
+            font-family: "Font Awesome 5 Free";
+            font-weight: 400;
+            }
+
+        & .ic-heart:hover::before{
+            position: absolute;
+            @include ic-heart;
+            content: "\f004";  /* this is your text. You can also use UTF-8 character codes as I do here */
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            opacity: 1;
+            color: $colour-primary;
+            transition: color 300ms ease-in-out;
+            transform-origin: center center;
+            
+        }
+    }
+
+    &-menu{
+        text-align: start;
+        height: 5rem;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-content: space-between;
+        box-shadow: 1px 3px 5px 0 rgb(0 0 0 / 10%);
+        background-color:$colour-white ;
+        border-radius: 15px;
+        margin: 1rem 0;
+        animation: menu_item 800ms cubic-bezier(.1,.9,.1,1) both;
+        &-1 {
+            animation-delay: 350ms;
+        }
+        &-2 {
+            animation-delay: 550ms;
+        }
+        &-3 {
+            animation-delay: 650ms;
+        }
+        // padding: 2.2rem 1rem 2.5rem 1rem;
+        &:hover {
+            & .card-menu-wrapper{
+                width: 80%;
+            }
+            & .card-menu-ok{
+                transform:translateX(0);
+            }
+        }
+        &-dish{
+            margin: 0 10px 30px 10px;
+        }
+
+        &-wrapper{
+            display: flex;
+            flex-flow:  column nowrap;
+            width: 100%;
+            transition: width 300ms ease-in-out; 
+            padding: 2rem 1rem;
+            cursor: pointer;
+        }
+        &-desc-name{
+            display: flex;
+            flex-flow:  row nowrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &-title{
+            font-weight: 500;
+            font-size: 1.1rem;
+            &-border{
+                width: 3rem;
+                margin-top: 4px;
+                border-bottom:3px solid $colour-tertiary;
+            }
+        } 
+        &-name{
+            font-weight: 900;
+            font-size: 1.2rem;
+        } 
+        &-desc{
+            font-size: 1.2rem;
+            line-height: 1;
+            opacity: 0.6;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        } 
+        &-price{
+            font-weight: 900;
+            font-size: 1.1rem;
+        } 
+        &-ok{
+            background-color: $colour-tertiary;
+            text-align: center;
+            height: 100%;
+            line-height: 5rem;
+            width: 20%;
+            border-radius: 0 15px 15px 0;
+            transform:translateX(9999px) ;
+            transition: transform 400ms ease-in-out; 
+            & i {
+                background-color: $colour-white;
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+                color: $colour-tertiary;
+                line-height: 1.5rem; 
+            }
+        } 
+        &-button {
+            background: linear-gradient($colour-secondary, $colour-primary);
+            border: 1px solid currentColor;
+            border-radius: 25px;
+            font-weight: 500;
+            font-size: 1.1rem;
+            color: #f0f0f0;
+            cursor: pointer;
+            padding: $m-ref*1.1 $m-ref*3;
+        }
+         
+    }
+}
+

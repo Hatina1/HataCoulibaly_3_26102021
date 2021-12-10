@@ -1,12 +1,53 @@
 @charset "UTF-8";
-/* @keyframes heart {
-    0%   {
-        background-color: $colour-primary;
-    }
-    50%   {
-        background-color: $colour-primary;
-    }
-} */
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@-webkit-keyframes home {
+  0% {
+    transform: translateX(-9999px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes home {
+  0% {
+    transform: translateX(-9999px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes loader {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    /* width:0;
+    height:0;
+    visibility:hidden; */
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    /* width:0;
+    height:0;
+    visibility:hidden; */
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes menu_item {
+  0% {
+    transform: translateY(50%);
+  }
+}
+@keyframes menu_item {
+  0% {
+    transform: translateY(50%);
+  }
+}
 *,
 *::after,
 *::before {
@@ -21,7 +62,7 @@ html {
 
 body {
   box-sizing: border-box;
-  background: #f0f0f0;
+  background: #fff;
 }
 
 body {
@@ -43,7 +84,7 @@ body {
 30px = 1,875rem
 32px = 2rem*/
 h1 {
-  font-family: "Shrikhand", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 900;
   font-size: 1.7rem;
   /*21px*/
@@ -52,7 +93,7 @@ h1 {
 }
 
 h2 {
-  font-family: "Shrikhand", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 900;
   font-size: 1.7rem;
   /*21px*/
@@ -86,7 +127,7 @@ button {
   height: auto;
   display: flex;
   align-items: space-between;
-  flex-flow: column wrap;
+  flex-flow: row nowrap;
   width: 100%;
   box-shadow: 0px 3px 5px 0 rgba(0, 0, 0, 0.2);
   margin-bottom: 2px;
@@ -95,6 +136,16 @@ button {
   color: #2a2a2a;
   padding: 1.5rem 1rem 0.5rem 1rem;
   height: 48px;
+  margin-left: 22px;
+}
+.header-arrow-back {
+  width: 5rem;
+  height: 3rem;
+  line-height: 5rem;
+  font-size: 1.5rem;
+}
+.header-arrow-back-hidden {
+  opacity: 0;
 }
 
 footer {
@@ -102,6 +153,9 @@ footer {
   color: #fff;
   text-align: start;
   padding-left: 0.5rem;
+  padding-bottom: 2rem;
+  position: relative;
+  top: 40px;
 }
 footer .footer-logo {
   padding: 1.5rem 1rem 0.5rem 1rem;
@@ -127,9 +181,31 @@ footer .footer-item {
 }
 
 .home {
+  position: relative;
   width: 100%;
-  padding: 1rem;
-  margin-bottom: 1rem;
+  height: 100%;
+}
+.home-loading {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+}
+.home-loading i {
+  font-size: 4rem;
+  color: #9356DC;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  /* left: 50%;
+  transform:translate(-50%, -50%); */
+  -webkit-animation: loader 1.85s linear infinite;
+          animation: loader 1.85s linear infinite;
+  margin: 0 0 0 -25px;
+}
+.home-wrapper {
+  z-index: 1;
+  -webkit-animation: home 0s 3s both;
+          animation: home 0s 3s both;
 }
 .home-city {
   background-color: #E5E5E5;
@@ -150,6 +226,7 @@ footer .footer-item {
 .home-top {
   text-align: center;
   padding: 0 0 4rem 0;
+  background-color: #f0f0f0;
 }
 .home-top .top-title {
   margin-bottom: 0.5rem;
@@ -199,6 +276,9 @@ footer .footer-item {
 .home-filter .filter-button:hover {
   background-color: rgba(147, 86, 220, 0.2);
 }
+.home-filter .filter-button:hover i {
+  color: #9356DC;
+}
 .home-filter .filter-button span {
   font-size: 1.1rem;
   color: #fff;
@@ -215,11 +295,9 @@ footer .footer-item {
   color: #2a2a2a;
   padding: 0 2rem;
 }
-.home-filter .filter-button i:hover {
-  color: #9356DC;
-}
 .home-card {
   padding: 3rem 0 5rem 0;
+  background-color: #f0f0f0;
 }
 .home-card .section-title {
   padding: 1rem;
@@ -272,6 +350,9 @@ footer .footer-item {
   justify-content: center;
   align-content: space-between;
   padding: 2rem 1rem 2.8rem 1rem;
+  background-color: #fff;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 1px 3px 5px 0 rgba(0, 0, 0, 0.2);
 }
 .home-card .card-desc-title {
   display: flex;
@@ -316,4 +397,164 @@ footer .footer-item {
   font-size: 1.2rem;
   line-height: 1;
   opacity: 0.6;
+}
+
+.card {
+  background-color: #f0f0f0;
+}
+.card img {
+  width: 100%;
+  height: 20rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0;
+}
+.card-content {
+  margin-bottom: 30px;
+}
+.card-top {
+  display: flex;
+  border-radius: 40px 40px 0 0;
+  width: 100%;
+  margin-top: -50px;
+  align-items: center;
+  background-color: #f0f0f0;
+  overflow: overlay;
+}
+.card-top-title {
+  font-family: "Shrikhand", cursive;
+  font-size: 2rem;
+  padding: 2rem 1.5rem;
+}
+.card-top .ic-heart {
+  position: relative;
+  line-height: 2.2rem;
+  top: -10px;
+  left: 10px;
+}
+.card-top .ic-heart::before {
+  position: absolute;
+  opacity: 0.6;
+  font-size: 1.7rem;
+  cursor: pointer;
+  content: "";
+  /* this is your text. You can also use UTF-8 character codes as I do here */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+}
+.card-top .ic-heart:hover::before {
+  position: absolute;
+  opacity: 0.6;
+  font-size: 1.7rem;
+  cursor: pointer;
+  content: "";
+  /* this is your text. You can also use UTF-8 character codes as I do here */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  opacity: 1;
+  color: #9356DC;
+  transition: color 300ms ease-in-out;
+  transform-origin: center center;
+}
+.card-menu {
+  text-align: start;
+  height: 5rem;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-content: space-between;
+  box-shadow: 1px 3px 5px 0 rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 15px;
+  margin: 1rem 0;
+  -webkit-animation: menu_item 800ms cubic-bezier(0.1, 0.9, 0.1, 1) both;
+          animation: menu_item 800ms cubic-bezier(0.1, 0.9, 0.1, 1) both;
+}
+.card-menu-1 {
+  -webkit-animation-delay: 350ms;
+          animation-delay: 350ms;
+}
+.card-menu-2 {
+  -webkit-animation-delay: 550ms;
+          animation-delay: 550ms;
+}
+.card-menu-3 {
+  -webkit-animation-delay: 650ms;
+          animation-delay: 650ms;
+}
+.card-menu:hover .card-menu-wrapper {
+  width: 80%;
+}
+.card-menu:hover .card-menu-ok {
+  transform: translateX(0);
+}
+.card-menu-dish {
+  margin: 0 10px 30px 10px;
+}
+.card-menu-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  transition: width 300ms ease-in-out;
+  padding: 2rem 1rem;
+  cursor: pointer;
+}
+.card-menu-desc-name {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-menu-title {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+.card-menu-title-border {
+  width: 3rem;
+  margin-top: 4px;
+  border-bottom: 3px solid #99E2D0;
+}
+.card-menu-name {
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+.card-menu-desc {
+  font-size: 1.2rem;
+  line-height: 1;
+  opacity: 0.6;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.card-menu-price {
+  font-weight: 900;
+  font-size: 1.1rem;
+}
+.card-menu-ok {
+  background-color: #99E2D0;
+  text-align: center;
+  height: 100%;
+  line-height: 5rem;
+  width: 20%;
+  border-radius: 0 15px 15px 0;
+  transform: translateX(9999px);
+  transition: transform 400ms ease-in-out;
+}
+.card-menu-ok i {
+  background-color: #fff;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  color: #99E2D0;
+  line-height: 1.5rem;
+}
+.card-menu-button {
+  background: linear-gradient(#FF79DA, #9356DC);
+  border: 1px solid currentColor;
+  border-radius: 25px;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #f0f0f0;
+  cursor: pointer;
+  padding: 1.1rem 3rem;
 }
