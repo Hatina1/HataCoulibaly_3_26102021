@@ -7,28 +7,35 @@ footer {
     position: relative;
     top: 40px;
     & .footer-logo {
-        padding: 1.5rem 1rem 0.5rem 1rem;
+        padding: 1.5rem 1rem 0.5rem 1.5rem;
         height: 40px;
         filter: invert(100%) sepia(0%) saturate(7%) hue-rotate(163deg) brightness(103%) contrast(102%);
     } 
     & .footer-list {
-        margin: 1rem 1rem 0 1rem;
+        margin: 0.5rem 1rem 0 1rem;
     }
 
     & li {
         text-align: start;
         line-height: 1.7rem;
+        opacity: 0.95;
+        color: #f0f0f0;
+
     }
 
     & i {
         padding: 0 0.5rem;
     }
-    & i:nth-child(2) {
+    & .footer-icon{
         transform: rotate(-45deg);
     }
 
     & .footer-item{
-        font-weight: normal;
         font-size: 1.1rem;
+        font-weight: 500;
     }
+    & .footer-icon{
+        padding-left: 0.5rem;
+    }
+    
 }

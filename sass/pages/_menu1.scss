@@ -64,15 +64,19 @@
         background-color:$colour-white ;
         border-radius: 15px;
         margin: 1rem 0;
-        animation: menu_item 800ms cubic-bezier(.1,.9,.1,1) both;
+        //animation: menu_item 800ms cubic-bezier(.1,.9,.1,1);
+        animation: menu_item ease-in-out;
         &-1 {
-            animation-delay: 350ms;
+            animation-duration: 1200ms;
+            //animation-delay: 350ms;
         }
         &-2 {
-            animation-delay: 550ms;
+            animation-duration: 1500ms;
+            //animation-delay: 550ms;
         }
         &-3 {
-            animation-delay: 650ms;
+            animation-duration: 1850ms;
+            //animation-delay: 650ms;
         }
         // padding: 2.2rem 1rem 2.5rem 1rem;
         &:hover {
@@ -91,7 +95,7 @@
             display: flex;
             flex-flow:  column nowrap;
             width: 100%;
-            transition: width 300ms ease-in-out; 
+            transition: width 500ms ease-in-out;  //300ms
             padding: 2rem 1rem;
             cursor: pointer;
         }
@@ -100,6 +104,7 @@
             flex-flow:  row nowrap;
             justify-content: space-between;
             align-items: center;
+            gap: 7px;
         }
         &-title{
             font-weight: 500;
@@ -134,7 +139,7 @@
             width: 20%;
             border-radius: 0 15px 15px 0;
             transform:translateX(9999px) ;
-            transition: transform 400ms ease-in-out; 
+            transition: transform 550ms ease-in-out;    //400ms
             & i {
                 background-color: $colour-white;
                 height: 20px;
