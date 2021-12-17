@@ -1,15 +1,13 @@
 footer {
+    color: $colour-white;
     background: $colour-black;
-    color: $colour-white;   
     text-align: start;
-    padding-left: 0.5rem;
-    padding-bottom: 2rem;
-    position: relative;
-    top: 40px;
+    padding: 0rem 0rem 2rem 0.5rem;
     & .footer-logo {
-        padding: 1.5rem 1rem 0.5rem 1.5rem;
-        height: 40px;
-        filter: invert(100%) sepia(0%) saturate(7%) hue-rotate(163deg) brightness(103%) contrast(102%);
+        padding: 1.8rem 1rem 0.5rem 1.5rem;
+        height: 42px;
+        filter: invert(100%) ;
+        //sepia(0%) saturate(7%) hue-rotate(163deg) brightness(103%) contrast(102%)
     } 
     & .footer-list {
         margin: 0.5rem 1rem 0 1rem;
@@ -18,24 +16,20 @@ footer {
     & li {
         text-align: start;
         line-height: 1.7rem;
-        opacity: 0.95;
-        color: #f0f0f0;
-
-    }
-
-    & i {
-        padding: 0 0.5rem;
+        opacity: 0.85;
+        color: $colour-p-white; //#fcfcfc
+        &:nth-child(3) {
+            padding-left: 0.5rem;
+        }
+        &:nth-child(4) {
+            padding-left: 0.5rem;
+        }
     }
     & .footer-icon{
         transform: rotate(-45deg);
     }
-
     & .footer-item{
-        font-size: 1.1rem;
-        font-weight: 500;
-    }
-    & .footer-icon{
-        padding-left: 0.5rem;
-    }
-    
+        font-size: 1.08rem;
+        font-weight: 600;
+    }   
 }

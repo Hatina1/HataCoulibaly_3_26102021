@@ -18,8 +18,8 @@ body {
 32px = 2rem*/
 h1 {
     font-family: 'Roboto', sans-serif;
-    font-weight: 900;
-    font-size: 1.7rem;/*21px*/
+    font-weight: 600; //900
+    font-size: 1.65rem;/*21px*/
     color: $colour-black;
     font-style: normal;
 }
@@ -42,8 +42,9 @@ li {
 
 p {
     display: inline-block;
-    font-weight: 500;
-    font-size: 1.1rem;
+    font-weight: 600;
+    font-size: 1.08rem;
+    line-height: 1.1;
 }
 
 

@@ -22,44 +22,47 @@
     &-wrapper {
         z-index: 1;
         animation: home 0s 1s both;
-        background-color: #f0f0f0;
+        background-color: $colour-bg;
     }
     
     &-city {
-        background-color:#E5E5E5;
-        text-align: center;
-        padding: $m-ref*1;
         display: flex;
         justify-content: center;
+        background-color:#e7e7e7;
+        text-align: center;
+        padding: $m-ref*1;
     }
-        &-neighb {
+    &-neighb {
+    font-size: 1.1rem;
+    font-weight: 600;
+    opacity: 0.75;
+    }
+    &-ic-map {
+        display: inline;
         font-size: 1.1rem;
-        font-weight: 600;
-        opacity: 0.8;
-        }
-        &-ic-map {
-            display: inline;
-            font-size: 1.1rem;
-            padding: 0 1rem;
-        }
+        padding: 0 1rem;
+    }
     &-top {
         text-align: center ;
-        padding: 0 0 $m-ref*4 0 ;
-        background-color: #f0f0f0;
+        padding: 0 0 $m-ref*4.6 0 ;
+        background-color: $colour-bg;
         & .top-title {
-            margin-bottom: $m-ref*0.5;
-            padding: 2.5rem 3rem 0 3rem;
+            margin-bottom: $m-ref*0.9;
+            padding: 2.8rem 3rem 0 3rem;
+            text-shadow: 0 0 0.9px #999999;
+            line-height: 1.1;
         } 
         & .top-desc {
-            font-size: 1.28rem;
-            margin-bottom: $m-ref*2;
-            line-height: 1;
-            color: #696767; //#868585
+            font-size: 1.25rem;
+            margin-bottom: $m-ref*2.2;
+            line-height: 1.1;
+            color: #777777;
             font-weight: 100;
+            text-shadow: 0 0 0.4px #999999;
         } 
         
         & .top-button {
-            padding: $m-ref*1 $m-ref*1.3;
+            padding: $m-ref*1 $m-ref*1.35;
             background: linear-gradient(
                 170deg, rgba(255,121,218,1) 0%, rgba(221,114,236,1) 20%, rgba(176,95,220,1) 80%, rgba(147,86,220,1) 100%);
             //linear-gradient(to bottom right,$colour-secondary, $colour-primary);
@@ -72,10 +75,11 @@
             border-right: #b05fdc;
             border-bottom: #b05fdc;
             border-radius: 25px;
-            font-size: 1.07rem;
-            color: #f0f0f0;
-            height: 41px;
+            font-size: 1.08rem;
+            color: $colour-p-white;
+            height: 42px;
             box-shadow: 1px 3px 8px 0 rgb(0 0 0 / 15%);
+            cursor: pointer;
             &:hover {
                 background: linear-gradient(170deg, #FF86E7 0%, #EA7FF9 20%, #BD6CE9 80%, #A063E9 100%);
                 //#ff79da 0%, #dd72ec 20%, #b05fdc 80%, #9356dc 100%
@@ -88,7 +92,7 @@
             }
             & span {
                 font-weight: 600;
-                opacity: 0.9;
+                opacity: 0.85;
             }
         }      
     }
@@ -97,10 +101,14 @@
         padding: $m-ref*2 0 $m-ref*3.8 0;
         & .section-title {
             padding: $m-ref;
-            margin-bottom: $m-ref*1;  
+            margin-bottom: $m-ref*0.8; 
+            margin-top: 0.2rem; 
         } 
         & .list{
-            list-style-type:circle;
+           // list-style-type:circle;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         } 
         & .filter-button {
             display: flex;
@@ -108,19 +116,19 @@
             align-items: center;
             background: #f6f6f6;
             border: 1px solid #f6f6f6;
-            border-radius: 20px;
+            border-radius: 18px;
             color: #524b4b;
             //opacity: 0.9;
             font-weight: 600;
             //font-size: 1.3rem;
-            width: 88%;
-            padding: $m-ref*1.6;
-            margin: 0 $m-ref*1.5 $m-ref*1.6 $m-ref*1.8; 
+            width: 87%;
+            padding: $m-ref*1.65;
+            margin: 0 $m-ref*1 $m-ref*1.65 $m-ref*2; 
             box-shadow: 1px 3px 8px 0 rgb(0 0 0 / 15%);
             &:hover {
-                background-color: rgba(147,86,220,20%)/* rgb de colour-primary #9356DC*/;
+                background-color: rgba(176,95,220, 0.15)/* rgb de colour-primary #9356DC*/;
                 border: 1px solid rgba(147,86,220,2%);
-                box-shadow: 1px 3px 8px 0 rgb(0 0 0 / 25%);
+                box-shadow: 1px 3px 8px 0 rgb(0 0 0 / 20%);
                 & i {
                     color: $colour-primary;
                 }
@@ -133,7 +141,7 @@
                 width: $m-ref*1.7;
                 height: $m-ref*1.7;
                 z-index: 3;
-                margin-left: -30px;
+                margin-left: -32px;
                 line-height: $m-ref*1.7;
                 .darken {
                     background-image: linear-gradient(
@@ -155,27 +163,27 @@
             }
             & p {
                 font-weight: 600;
-                color: #444444;
+                color: $colour-black;
+                opacity: 0.85;
             }
         } 
             
     }
 
     &-card {
-        padding: $m-ref*3 0 $m-ref*5 0;
+        padding: $m-ref*3 0;
         background-color:$colour-bg;
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
         & .section-title {
-            padding: $m-ref;
-            margin-bottom: $m-ref*1;
+            padding: $m-ref*1 $m-ref*0 $m-ref*1.5 $m-ref*1.5;
             align-self: flex-start;
         } 
         & .card{
             background-color:$colour-white;
             width: 90%;
-            margin: 1rem;
+            margin: $m-ref*0 $m-ref*1 $m-ref*1.32 $m-ref*1 ;
             border-radius: 12px;
             
             /*@include btn-filter;*/
@@ -189,13 +197,12 @@
             }  
             & img{
                 width: 100%;
-                height: 12.5rem;
+                height: 12.4rem;
                 object-fit: cover; 
-                
                 border-radius: 12px 12px 0 0;
             }
             &-img-1{
-                object-position: 50% 113%;
+                object-position: 50% 88%;
             }  
             &-img-2{
                 object-position: 50% 63%;
@@ -214,73 +221,65 @@
                 background-color:#99E2D0;
                 top: 7%;
                 right: 3%;
-                padding: $m-ref*0.4 $m-ref*0.7;
+                padding: $m-ref*0.45 $m-ref*0.7;
                 font-size: $m-ref*0.95;
                 font-weight: 600;
                 border-radius: 2px;
             } 
         & .card-desc{
-            text-align: start;
-            height: 3.5rem;
             display: flex;
             flex-flow: column wrap;
             justify-content: center;
             align-content: space-between;
-            padding: 2rem 1rem 2.8rem 1rem;
+            text-align: start;
+            height: 4.5rem;
+            padding: 2.5rem 0.5rem 2.8rem 1rem;
             background-color:$colour-white;
             border-radius: 0 0 12px 12px;
-            box-shadow: 1px 3px 5px 0 rgb(0 0 0 / 20%);
+            box-shadow: 1px 3px 5px 0 rgb(0 0 0 / 15%);
         }
         & .card-desc-title{
             display: flex;
             flex-flow:  column wrap;
-            line-height: $m-ref*2.2;
         }
 
         & .card-desc-icon {
+            display: flex;
+            align-items: center;
             position: relative;
             line-height: $m-ref*2.2;
             @include ic-heart;
-            display: flex;
-            align-items: center;
-            top: -5px;
             &-empty{
                 position: absolute;
                 font-size: 1.62rem;
                 color: #706b69;
-                //opacity: 0.6;
             }
             &-fill{
                 position: absolute;
                 font-size: 1.34rem;
                 top: -13px;
-                //opacity: 0.6;
             }
             &:hover{
                 & .card-desc-icon-empty {
                     color: rgb(176,95,220);
                     transition: color 800ms ease-in-out;
-                    //transition: color 800ms ease-in-out, opacity 1200ms 200ms ease-in-out;
                     transform-origin: center center;
                     }
                 & .card-desc-icon-fill {
-                color: rgb(176,95,220);
-                transition: color 800ms ease-in-out;
-                //transition: color 800ms ease-in-out , opacity 1200ms 200ms ease-in-out;
-                transform-origin: center center;
+                    color: rgb(176,95,220);
+                    transition: color 800ms ease-in-out;
+                    transform-origin: center center;
                 }
             }
         }
 
-        
-
         & .card-name{
             font-weight: 900;
-            font-size: 1.2rem;
+            font-size: 1.25rem;
         } 
         & .card-city{
+            padding-top: 0.5rem;
             font-size: 1.2rem;
-            line-height: 1;
             opacity: 0.9;
             color: #696767;
             font-weight: 100;

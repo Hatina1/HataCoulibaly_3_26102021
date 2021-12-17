@@ -1,5 +1,7 @@
 .card {
-    background-color: $colour-bg;
+    background-color: $colour-bg-menu;
+    display: flex;
+    flex-direction: column;
     & img{
         width: 100%;
         height: 20rem;
@@ -8,8 +10,9 @@
     } 
    
     &-content {
-        margin-bottom: 30px;
+        background-color: $colour-bg-menu;
     }
+
 
     &-top {
         display: flex;
@@ -17,7 +20,7 @@
         width: 100%;
         margin-top: -50px;
         align-items: center;
-        background-color: $colour-bg;
+        background-color: $colour-bg-menu;
         overflow: overlay;
         &-title {
             font-family: 'Shrikhand', cursive;
@@ -26,30 +29,33 @@
             }
     
         & .ic-heart{
+            display: flex;
+            align-items: center;
             position: relative;
             line-height: $m-ref*2.2;
-            top: -10px;
-            left: 10px;
-            }
-        & .ic-heart::before {
-            position: absolute;
             @include ic-heart;
-            content: "\f004";  /* this is your text. You can also use UTF-8 character codes as I do here */
-            font-family: "Font Awesome 5 Free";
-            font-weight: 400;
+            &-empty{
+                position: absolute;
+                font-size: 1.62rem;
+                color: #706b69;
             }
-
-        & .ic-heart:hover::before{
-            position: absolute;
-            @include ic-heart;
-            content: "\f004";  /* this is your text. You can also use UTF-8 character codes as I do here */
-            font-family: "Font Awesome 5 Free";
-            font-weight: 900;
-            opacity: 1;
-            color: $colour-primary;
-            transition: color 300ms ease-in-out;
-            transform-origin: center center;
-            
+            &-fill{
+                position: absolute;
+                font-size: 1.34rem;
+                color: $colour-bg-menu;
+            }
+            &:hover{
+                & .ic-heart-empty {
+                    color: rgb(176,95,220);
+                    transition: color 800ms ease-in-out;
+                    transform-origin: center center;
+                    }
+                & .ic-heart-fill {
+                    color: rgb(176,95,220);
+                    transition: color 800ms ease-in-out;
+                    transform-origin: center center;
+                }
+            }
         }
     }
 
@@ -105,6 +111,7 @@
             justify-content: space-between;
             align-items: center;
             gap: 7px;
+            padding-top: 0.5rem;
         }
         &-title{
             font-weight: 500;
@@ -117,12 +124,13 @@
         } 
         &-name{
             font-weight: 900;
-            font-size: 1.2rem;
+            font-size: 1.25rem;
         } 
         &-desc{
-            font-size: 1.2rem;
-            line-height: 1;
-            opacity: 0.6;
+            font-size: 1.1rem;
+            color: #696767;
+            font-weight: 100;
+            opacity: 0.9;
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
@@ -150,16 +158,127 @@
             }
         } 
         &-button {
-            background: linear-gradient($colour-secondary, $colour-primary);
-            border: 1px solid currentColor;
-            border-radius: 25px;
-            font-weight: 500;
-            font-size: 1.1rem;
-            color: #f0f0f0;
-            cursor: pointer;
+            background: linear-gradient(
+            170deg, rgba(255,121,218,1) 0%, rgba(221,114,236,1) 20%, rgba(176,95,220,1) 80%, rgba(147,86,220,1) 100%);
+            border: 1px solid; 
+            border-top: #dd72ec;
+            border-left: #dd72ec;
+            border-right: #b05fdc;
+            border-bottom: #b05fdc;
             padding: $m-ref*1.1 $m-ref*3;
+            margin-bottom: 3rem;
+            border-radius: 25px;
+            font-size: 1.08rem;
+            color: $colour-p-white;
+            height: 42px;
+            box-shadow: 1px 3px 8px 0 rgb(0 0 0 / 15%);
+            cursor: pointer;
+            &:hover {
+                background: linear-gradient(170deg, #FF86E7 0%, #EA7FF9 20%, #BD6CE9 80%, #A063E9 100%);
+                border: 1px solid; 
+                border-top: #dd72ec;
+                border-left: #dd72ec;
+                border-right: #b05fdc;
+                border-bottom: #b05fdc;
+                box-shadow: 1px 3px 8px 0 rgb(0 0 0 / 25%);
+            }
+            & span {
+                font-weight: 600;
+                opacity: 0.85;
+            }
         }
          
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media screen and (min-width: 1024px) {
+    body {
+      margin:0 10rem;
+    }
+} */
+
+
+
+
+
+@media screen and (min-width: 321px) {
+    .card {
+        &-top {
+            display: flex;
+            justify-content: center;
+            margin-top: -80px;
+            margin-bottom: 20px;
+            align-items: center;
+        }    
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .card {
+        background-color: $colour-bg-menu;
+        & img{
+            height: 30rem;
+        } 
+        &-content {
+            position: relative;
+            width: 80%;
+            left: 10%;
+            background-color: #fff;
+        }
+
+        &-top {
+            background-color: #fff;
+            &-title {
+                font-size: 2.5rem;
+                padding: 2rem 1.5rem;
+            }
+            & .ic-heart{
+                &-empty{
+                    font-size: 2.0rem;
+                    color: #706b69;
+                }
+                &-fill{
+                    font-size: 1.66rem;
+                    color: $colour-white;
+                }
+            }
+        }    
+        &-menu{
+            background-color: $colour-bg;
+            &-dish{
+                background-color: #fff;
+                margin: 10px 0px 30px 50px;
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+            }
+            &-title {
+                font-size: 1.3rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .card { 
+        &-content {
+            width: 40%;
+            left: 30%;
+        }
+    }
+}
