@@ -295,7 +295,7 @@ footer .footer-item {
   border-bottom: #b05fdc;
   border-radius: 25px;
   font-size: 1.08rem;
-  color: #f9f9f9;
+  color: #fff;
   height: 42px;
   box-shadow: 1px 3px 8px 0 rgba(0, 0, 0, 0.15);
   cursor: pointer;
@@ -386,6 +386,10 @@ footer .footer-item {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  /* &-list{
+      display: flex;
+      flex-direction: column;
+  }  */
 }
 .home-card .section-title {
   padding: 1rem 0rem 1.5rem 1.5rem;
@@ -497,6 +501,55 @@ footer .footer-item {
   text-shadow: 0 0 0.3px #696767;
 }
 
+@media screen and (min-width: 321px) {
+  .home-filter .list {
+    margin: 0 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .home-top .top-desc {
+    display: block;
+  }
+  .home-filter .section-title {
+    text-align: center;
+  }
+  .home-filter .list {
+    flex-direction: row;
+    width: 95%;
+  }
+  .home-filter .filter-button {
+    width: 80%;
+    padding: 1rem 1.5rem;
+  }
+  .home-filter .filter-button span {
+    width: 2.2rem;
+  }
+  .home-filter .filter-button p {
+    font-size: 1.2rem;
+  }
+  .home-card {
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  .home-card .section-title {
+    align-self: center;
+    margin: 0 500px;
+  }
+  .home-card .card {
+    width: 288px;
+    height: 216px;
+    margin: 0rem 2rem 1.32rem 2rem;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .home-filter .filter-button {
+    width: 90%;
+    margin: 0 3rem 1.65rem 3rem;
+  }
+  .home-filter .filter-button span {
+    width: 1.7rem;
+  }
+}
 .card {
   background-color: #f0f0f0;
   display: flex;
@@ -660,7 +713,7 @@ footer .footer-item {
   margin-bottom: 3rem;
   border-radius: 25px;
   font-size: 1.08rem;
-  color: #f9f9f9;
+  color: #fff;
   height: 42px;
   box-shadow: 1px 3px 8px 0 rgba(0, 0, 0, 0.15);
   cursor: pointer;

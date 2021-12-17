@@ -76,7 +76,7 @@
             border-bottom: #b05fdc;
             border-radius: 25px;
             font-size: 1.08rem;
-            color: $colour-p-white;
+            color: $colour-white;
             height: 42px;
             box-shadow: 1px 3px 8px 0 rgb(0 0 0 / 15%);
             cursor: pointer;
@@ -180,6 +180,10 @@
             padding: $m-ref*1 $m-ref*0 $m-ref*1.5 $m-ref*1.5;
             align-self: flex-start;
         } 
+        /* &-list{
+            display: flex;
+            flex-direction: column;
+        }  */
         & .card{
             background-color:$colour-white;
             width: 90%;
@@ -187,7 +191,7 @@
             border-radius: 12px;
             
             /*@include btn-filter;*/
-        
+            
             & a{
                 text-decoration: none;
                 position: relative;
@@ -285,5 +289,100 @@
             font-weight: 100;
             text-shadow: 0 0 0.3px #696767;
         } 
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 321px) {
+    .home {
+        &-filter {
+            & .list{
+                margin: 0 20px;
+            } 
+        }        
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .home {
+        &-top {
+            & .top-desc {
+                display: block;
+            }
+        }
+        &-filter {
+            & .section-title {
+                text-align: center; 
+            } 
+            & .list{
+                flex-direction: row;
+                width: 95%;
+            } 
+
+            & .filter-button{
+                width: 80%;
+                padding: 1rem 1.5rem;
+                & span{
+                    width: $m-ref*2.2;
+                 } 
+                 & p {
+                    font-size: 1.2rem;
+                }
+            } 
+        } 
+        &-card {
+            flex-flow: row wrap;
+            justify-content: center;
+            & .section-title {
+                align-self: center;
+                margin: 0 500px;
+            } 
+            & .card {
+                width: 288px;
+                height: 216px;
+                margin: $m-ref*0 $m-ref*2 $m-ref*1.32 $m-ref*2 ;
+            } 
+
+            
+        }     
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .home {
+        &-filter {
+            & .filter-button{
+                width: 90%;
+                margin: 0 3rem 1.65rem 3rem;
+                & span{
+                    width: $m-ref*1.7;
+                 } 
+            } 
+        }        
     }
 }
