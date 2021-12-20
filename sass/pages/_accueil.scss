@@ -3,21 +3,25 @@
     width: 100%;
     height: 100%;
     &-loading {
-        position: absolute;
+        position: fixed;
         width: 100%;
         height: 100vh;
         display: flex; 
         flex-direction: column;
         align-items: center; justify-content: center;
+        pointer-events: none;
         & div {
             width: 60px;
             height: 60px;
-            border: 12px solid $colour-primary;
             border-top: 12px solid #f3f3f3;
+            border-right: 12px solid $colour-primary;
+            border-bottom: 12px solid #A063E9;
+            border-left: 12px solid #AD70F6;
+            //#EA7FF9
             border-radius: 50%;
             animation: loader 1s linear infinite; //1.8ms et 2.2ms pour home
             
-        }         
+        }       
     }
     &-wrapper {
         z-index: 1;
@@ -30,17 +34,23 @@
         justify-content: center;
         background-color:#e7e7e7;
         text-align: center;
-        padding: $m-ref*1;
+        padding: $m-ref*0.5;
     }
     &-neighb {
     font-size: 1.1rem;
     font-weight: 600;
     opacity: 0.75;
+    display: inline-block;
+    line-height: 2;
+    border:none;
+    background-color:#e7e7e7;
+    width: 8.25rem;
     }
     &-ic-map {
         display: inline;
         font-size: 1.1rem;
         padding: 0 1rem;
+        line-height: 2;
     }
     &-top {
         text-align: center ;
@@ -59,6 +69,10 @@
             color: #777777;
             font-weight: 100;
             text-shadow: 0 0 0.4px #999999;
+        } 
+        & a{
+            text-decoration: none;
+            color: $colour-white;
         } 
         
         & .top-button {
@@ -133,7 +147,7 @@
                     color: $colour-primary;
                 }
             } 
-            & span {
+            &-nb {
                 font-size: $m-ref*0.95;
                 color: $colour-white;
                 background-color: $colour-primary; /* #8649CF darken 5% #9356DC https://www.cssfontstack.com/oldsites/hexcolortool/*/
@@ -143,12 +157,6 @@
                 z-index: 3;
                 margin-left: -32px;
                 line-height: $m-ref*1.7;
-                .darken {
-                    background-image: linear-gradient(
-                      0deg,
-                      rgba(0,0,0,0.1) 0%,
-                      rgba(0,0,0,0.1) 100%);
-                }
             }
             & i {
                 font-size: $m-ref*1.1;
@@ -161,7 +169,10 @@
             & .filter-icon-2 {
                 font-size: $m-ref*1.25;
             }
-            & p {
+            &-desc {
+                display: inline-block;
+                font-size: 1.08rem;
+                line-height: 1.1;
                 font-weight: 600;
                 color: $colour-black;
                 opacity: 0.85;
@@ -212,7 +223,7 @@
                 object-position: 50% 63%;
             } 
             &-img-3{
-                object-position: 0% 113%;
+                object-position: 0% 105%;
             } 
             &-img-4{
                 object-position: 0% 104%;
@@ -237,7 +248,7 @@
             align-content: space-between;
             text-align: start;
             height: 4.5rem;
-            padding: 2.5rem 0.5rem 2.8rem 1rem;
+            padding: 3rem 0.5rem 2.3rem 1rem;
             background-color:$colour-white;
             border-radius: 0 0 12px 12px;
             box-shadow: 1px 3px 5px 0 rgb(0 0 0 / 15%);
@@ -253,6 +264,7 @@
             position: relative;
             line-height: $m-ref*2.2;
             @include ic-heart;
+            top: -8px;
             &-empty{
                 position: absolute;
                 font-size: 1.62rem;
@@ -265,13 +277,14 @@
             }
             &:hover{
                 & .card-desc-icon-empty {
-                    color: rgb(176,95,220);
+                    color: $colour-white;
                     transition: color 800ms ease-in-out;
                     transform-origin: center center;
                     }
                 & .card-desc-icon-fill {
                     color: rgb(176,95,220);
-                    transition: color 800ms ease-in-out;
+                    transform: scale(1.2);
+                    transition: color 800ms ease-in-out, transform 500ms ease-in-out;
                     transform-origin: center center;
                 }
             }
@@ -280,6 +293,7 @@
         & .card-name{
             font-weight: 900;
             font-size: 1.25rem;
+            color: #333333;
         } 
         & .card-city{
             padding-top: 0.5rem;
@@ -347,10 +361,10 @@
             & .filter-button{
                 width: 80%;
                 padding: 1rem 1.5rem;
-                & span{
+                &-nb{
                     width: $m-ref*2.2;
                  } 
-                 & p {
+                 &-desc{
                     font-size: 1.2rem;
                 }
             } 
@@ -379,7 +393,7 @@
             & .filter-button{
                 width: 90%;
                 margin: 0 3rem 1.65rem 3rem;
-                & span{
+                &-nb{
                     width: $m-ref*1.7;
                  } 
             } 

@@ -21,7 +21,7 @@
         margin-top: -50px;
         align-items: center;
         background-color: $colour-bg-menu;
-        overflow: overlay;
+        //overflow: visible;
         &-title {
             font-family: 'Shrikhand', cursive;
             font-size: 2rem;
@@ -43,17 +43,16 @@
                 position: absolute;
                 font-size: 1.34rem;
                 color: $colour-bg-menu;
+                transform: scale(0.8); //test
             }
             &:hover{
                 & .ic-heart-empty {
-                    color: rgb(176,95,220);
-                    transition: color 800ms ease-in-out;
-                    transform-origin: center center;
+                    color: $colour-white;
+                    opacity: 0;
+                    
                     }
                 & .ic-heart-fill {
-                    color: rgb(176,95,220);
-                    transition: color 800ms ease-in-out;
-                    transform-origin: center center;
+                    animation: heartfill 800ms ease-in both;
                 }
             }
         }
@@ -84,13 +83,22 @@
             animation-duration: 1850ms;
             //animation-delay: 650ms;
         }
+        &-4 {
+            animation-duration: 2000ms;
+            //animation-delay: 650ms;
+        }
         // padding: 2.2rem 1rem 2.5rem 1rem;
         &:hover {
             & .card-menu-wrapper{
                 width: 80%;
             }
             & .card-menu-ok{
-                transform:translateX(0);
+                //transform:translateX(0);
+                animation: selected 850ms ease-in-out both; 
+                & i{
+                    animation: check-rotation 950ms ease-in-out both;
+                }
+                
             }
         }
         &-dish{
@@ -101,7 +109,7 @@
             display: flex;
             flex-flow:  column nowrap;
             width: 100%;
-            transition: width 500ms ease-in-out;  //300ms
+            transition: width 800ms ease-in-out;  //300ms
             padding: 2rem 1rem;
             cursor: pointer;
         }
@@ -147,7 +155,8 @@
             width: 20%;
             border-radius: 0 15px 15px 0;
             transform:translateX(9999px) ;
-            transition: transform 550ms ease-in-out;    //400ms
+            //opacity: 0;
+            //transition: transform 550ms ease-in-out;    //400ms
             & i {
                 background-color: $colour-white;
                 height: 20px;
@@ -203,13 +212,6 @@
 
 
 
-
-
-/* @media screen and (min-width: 1024px) {
-    body {
-      margin:0 10rem;
-    }
-} */
 
 
 

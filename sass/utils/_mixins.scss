@@ -47,5 +47,83 @@
         
     }
 }
-    
-    
+  
+@keyframes selected {
+    0% {
+        opacity:0;
+        transform: translateX(9999px);
+    }
+    10% {
+        transform: translateX(0%);
+    }
+   
+    100% {
+        
+        transform: translateX(0%);
+        opacity:1;
+    }
+}
+@keyframes check-rotation {
+    0%   {
+        transform: rotate(360deg);
+    }
+    100%  {
+        /* width:0;
+        height:0;
+        visibility:hidden; */
+        transform: rotate(0);
+    }  
+} 
+
+@keyframes heartfill {
+	0% {
+		opacity: 0;
+        transform: scale(0.8);
+        transform-origin: center center;
+        
+	}
+    50% {
+        //color: rgb(176,95,220);
+        color:#B05FDC;
+        background: #121FCF;
+        background: -webkit-linear-gradient(170deg, #FF86E7 0%, #EA7FF9 20%, #BD6CE9 80%, #A063E9 100%);
+        background: -moz-linear-gradient(170deg, #FF86E7 0%, #EA7FF9 20%, #BD6CE9 80%, #A063E9 100%);
+        background: linear-gradient(170deg, #FF86E7 0%, #EA7FF9 20%, #BD6CE9 80%, #A063E9 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+		opacity: 0.5;
+        transform: scale(1);
+        transform-origin: center center;
+	}
+	100% {
+        transform: scale(1.2);
+        transform-origin: center center;
+        //  display: block;
+        //color: rgb(176,95,220);
+        color:#B05FDC;
+        background: #121FCF;
+        background: -webkit-linear-gradient(170deg, #FF86E7 0%, #EA7FF9 20%, #BD6CE9 80%, #A063E9 100%);
+        background: -moz-linear-gradient(170deg, #FF86E7 0%, #EA7FF9 20%, #BD6CE9 80%, #A063E9 100%);
+        background: linear-gradient(170deg, #FF86E7 0%, #EA7FF9 20%, #BD6CE9 80%, #A063E9 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+		opacity: 1;
+        
+	}
+}
+
+@keyframes heartempty{
+	0% {
+		opacity: 0;
+        transform: scale(0.6);
+	}
+    50% {
+        color: rgb(176,95,220);
+		
+	}
+	100% {
+        transform: scale(1.2);
+        color: rgb(176,95,220);
+		opacity: 1;
+	}
+}

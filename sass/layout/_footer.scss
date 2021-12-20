@@ -3,8 +3,10 @@ footer {
     background: $colour-black;
     text-align: start;
     padding: 0rem 0rem 2rem 0.5rem;
+    display: flex;
+    flex-direction: column;
     & .footer-logo {
-        padding: 1.8rem 1rem 0.5rem 1.5rem;
+        padding: 1.8rem 1rem 0.5rem 1rem;
         height: 42px;
         filter: invert(100%) ;
         //sepia(0%) saturate(7%) hue-rotate(163deg) brightness(103%) contrast(102%)
@@ -17,13 +19,11 @@ footer {
         text-align: start;
         line-height: 1.7rem;
         opacity: 0.85;
-        color: $colour-p-white; //#fcfcfc
-        &:nth-child(3) {
-            padding-left: 0.5rem;
-        }
-        &:nth-child(4) {
-            padding-left: 0.5rem;
-        }
+        color: $colour-white; //#fcfcfc
+        & a{
+            text-decoration: none;
+            color: $colour-white;
+        } 
     }
     & .footer-icon{
         transform: rotate(-45deg);
@@ -31,5 +31,71 @@ footer {
     & .footer-item{
         font-size: 1.08rem;
         font-weight: 600;
-    }   
+        &-1{
+            padding-left: 5px;
+        } 
+    } 
+      
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+
+@media screen and (min-width: 1024px) {
+    footer {
+        padding: 0rem 0rem 1rem 0.5rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 10rem;
+        & .footer-logo  {
+            height: 48px;
+            margin-left: 2rem;
+        }
+        & .footer-item {
+            font-size: 1.3rem;
+        }
+        & .footer-list {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            height: 4rem;
+            margin-left: 5rem;
+        } 
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    footer {
+        padding: 0rem 0rem 1rem 0.5rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 10rem;
+        & .footer-logo  {
+            height: 50px;
+            margin-left: 4rem;
+        }
+        & .footer-item {
+            font-size: 1.3rem;
+        }
+        & .footer-list {
+            display: flex;
+            align-items: center;
+            gap: 6rem;
+            height: 4rem;
+            margin-left: 12rem;
+        } 
+    }
 }
