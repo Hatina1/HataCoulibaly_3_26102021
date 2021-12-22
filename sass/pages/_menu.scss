@@ -1,3 +1,7 @@
+body{
+    width: 100%;
+    height: 100vh;
+}
 .card {
     background-color: $colour-bg-menu;
     display: flex;
@@ -61,6 +65,8 @@
     &-menu{
         text-align: start;
         height: 5rem;
+        width: 100%;
+        overflow: hidden;
         display: flex;
         flex-flow: column wrap;
         justify-content: center;
@@ -84,7 +90,7 @@
             //animation-delay: 650ms;
         }
         &-4 {
-            animation-duration: 2000ms;
+            animation-duration: 2100ms;
             //animation-delay: 650ms;
         }
         // padding: 2.2rem 1rem 2.5rem 1rem;
@@ -108,9 +114,9 @@
         &-wrapper{
             display: flex;
             flex-flow:  column nowrap;
-            width: 100%;
+            width: 120%;
             transition: width 800ms ease-in-out;  //300ms
-            padding: 2rem 1rem;
+            padding: 0 1rem;
             cursor: pointer;
         }
         &-desc-name{
