@@ -648,7 +648,7 @@ footer .footer-item-1 {
   align-content: space-between;
   text-align: start;
   height: 4.5rem;
-  padding: 2.5rem 0.5rem 2.8rem 1rem;
+  padding: 2.2rem 0.5rem 2.8rem 1rem;
   background-color: #fff;
   border-radius: 0 0 12px 12px;
   box-shadow: 1px 3px 5px 0 rgba(0, 0, 0, 0.15);
@@ -675,17 +675,15 @@ footer .footer-item-1 {
   position: absolute;
   font-size: 1.34rem;
   top: -13px;
+  transform: scale(0.8);
 }
 .home-card .card-desc-icon:hover .card-desc-icon-empty {
   color: #fff;
-  transition: color 800ms ease-in-out;
-  transform-origin: center center;
+  opacity: 0;
 }
 .home-card .card-desc-icon:hover .card-desc-icon-fill {
-  color: #b05fdc;
-  transform: scale(1.2);
-  transition: color 800ms ease-in-out, transform 500ms ease-in-out;
-  transform-origin: center center;
+  -webkit-animation: heartfill 800ms ease-in both;
+          animation: heartfill 800ms ease-in both;
 }
 .home-card .card-name {
   font-weight: 900;
@@ -813,7 +811,6 @@ body {
 .card-menu {
   text-align: start;
   height: 5rem;
-  width: 100%;
   overflow: hidden;
   display: flex;
   flex-flow: column wrap;
@@ -859,7 +856,7 @@ body {
 .card-menu-wrapper {
   display: flex;
   flex-flow: column nowrap;
-  width: 120%;
+  width: 100%;
   transition: width 800ms ease-in-out;
   padding: 0 1rem;
   cursor: pointer;
@@ -884,6 +881,9 @@ body {
 .card-menu-name {
   font-weight: 900;
   font-size: 1.25rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .card-menu-desc {
   font-size: 1.1rem;

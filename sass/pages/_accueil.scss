@@ -247,7 +247,7 @@
             align-content: space-between;
             text-align: start;
             height: 4.5rem;
-            padding: 2.5rem 0.5rem 2.8rem 1rem;
+            padding: 2.2rem 0.5rem 2.8rem 1rem;
             background-color:$colour-white;
             border-radius: 0 0 12px 12px;
             box-shadow: 1px 3px 5px 0 rgb(0 0 0 / 15%);
@@ -273,18 +273,15 @@
                 position: absolute;
                 font-size: 1.34rem;
                 top: -13px;
+                transform: scale(0.8); 
             }
             &:hover{
                 & .card-desc-icon-empty {
                     color: $colour-white;
-                    transition: color 800ms ease-in-out;
-                    transform-origin: center center;
+                    opacity: 0;
                     }
                 & .card-desc-icon-fill {
-                    color: rgb(176,95,220);
-                    transform: scale(1.2);
-                    transition: color 800ms ease-in-out, transform 500ms ease-in-out;
-                    transform-origin: center center;
+                    animation: heartfill 800ms ease-in both;
                 }
             }
         }
