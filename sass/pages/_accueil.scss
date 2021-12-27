@@ -195,20 +195,22 @@
             display: flex;
             flex-direction: column;
         }  */
+        & a{
+            text-decoration: none;
+            position: relative;
+            display: inline-block;
+        } 
+
         & .card{
             background-color:$colour-white;
             width: 90%;
-            margin: $m-ref*0 $m-ref*1 $m-ref*1.32 $m-ref*1 ;
+            margin: $m-ref*0 $m-ref*0 $m-ref*1.32 $m-ref*0;
             border-radius: 12px;
+            width: 288px;
+            height: 216px;
             
             /*@include btn-filter;*/
-            
-            & a{
-                text-decoration: none;
-                position: relative;
-                display: inline-block;
-                width: 100%;
-            }  
+             
             & img{
                 width: 100%;
                 height: 12.4rem;
@@ -228,26 +230,33 @@
                 object-position: 0% 104%;
             } 
         } 
-            & .card-badge{
-                position: absolute;
-                z-index: 5; 
-                color: darken($color: #99E2D0, $amount: 35%);
-                background-color:#99E2D0;
-                top: 7%;
-                right: 3%;
-                padding: $m-ref*0.45 $m-ref*0.7;
-                font-size: $m-ref*0.95;
-                font-weight: 600;
-                border-radius: 2px;
-            } 
+
+        & .card-img{
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        } 
+
+        & .card-badge{
+            position: absolute;
+            z-index: 5; 
+            color: darken($color: #99E2D0, $amount: 35%);
+            background-color:#99E2D0;
+            top: 7%;
+            right: 3%;
+            padding: $m-ref*0.45 $m-ref*0.7;
+            font-size: $m-ref*0.95;
+            font-weight: 600;
+            border-radius: 2px;
+        } 
         & .card-desc{
             display: flex;
             flex-flow: column wrap;
             justify-content: center;
             align-content: space-between;
             text-align: start;
-            height: 4.5rem;
-            padding: 2.2rem 0.5rem 2.8rem 1rem;
+            height: 5.5rem;
+            padding: 2.5rem 0.5rem 2.8rem 1rem;
             background-color:$colour-white;
             border-radius: 0 0 12px 12px;
             box-shadow: 1px 3px 5px 0 rgb(0 0 0 / 15%);

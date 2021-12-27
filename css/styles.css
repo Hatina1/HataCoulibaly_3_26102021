@@ -593,18 +593,19 @@ footer .footer-item-1 {
   padding: 1rem 0rem 1.5rem 1.5rem;
   align-self: flex-start;
 }
-.home-card .card {
-  background-color: #fff;
-  width: 90%;
-  margin: 0rem 1rem 1.32rem 1rem;
-  border-radius: 12px;
-  /*@include btn-filter;*/
-}
-.home-card .card a {
+.home-card a {
   text-decoration: none;
   position: relative;
   display: inline-block;
-  width: 100%;
+}
+.home-card .card {
+  background-color: #fff;
+  width: 90%;
+  margin: 0rem 0rem 1.32rem 0rem;
+  border-radius: 12px;
+  width: 288px;
+  height: 216px;
+  /*@include btn-filter;*/
 }
 .home-card .card img {
   width: 100%;
@@ -629,6 +630,11 @@ footer .footer-item-1 {
   -o-object-position: 0% 104%;
      object-position: 0% 104%;
 }
+.home-card .card-img {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
 .home-card .card-badge {
   position: absolute;
   z-index: 5;
@@ -647,8 +653,8 @@ footer .footer-item-1 {
   justify-content: center;
   align-content: space-between;
   text-align: start;
-  height: 4.5rem;
-  padding: 2.2rem 0.5rem 2.8rem 1rem;
+  height: 5.5rem;
+  padding: 2.5rem 0.5rem 2.8rem 1rem;
   background-color: #fff;
   border-radius: 0 0 12px 12px;
   box-shadow: 1px 3px 5px 0 rgba(0, 0, 0, 0.15);
