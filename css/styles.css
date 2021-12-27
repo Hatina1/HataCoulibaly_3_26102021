@@ -287,6 +287,10 @@ button {
   line-height: 5rem;
   font-size: 1.5rem;
 }
+.header-arrow-back a {
+  -webkit-text-decoration: black;
+          text-decoration: black;
+}
 .header-arrow-back-hidden {
   opacity: 0;
 }
