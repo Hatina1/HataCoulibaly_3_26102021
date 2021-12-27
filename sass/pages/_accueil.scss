@@ -34,7 +34,7 @@
         justify-content: center;
         background-color:#e7e7e7;
         text-align: center;
-        padding: $m-ref*0.5;
+        padding: $m-ref*0.6;
     }
     &-neighb {
     font-size: 1.1rem;
@@ -281,7 +281,7 @@
             &-fill{
                 position: absolute;
                 font-size: 1.34rem;
-                top: -13px;
+                top: -11.5px;
                 transform: scale(0.8); 
             }
             &:hover{
@@ -379,7 +379,7 @@
             justify-content: center;
             & .section-title {
                 align-self: center;
-                margin: 0 500px;
+                margin: 0 505px;
             } 
             & .card {
                 width: 288px;

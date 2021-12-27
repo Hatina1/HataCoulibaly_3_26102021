@@ -268,6 +268,7 @@ button {
 
 .header {
   background: #fff;
+  position: relative;
   height: auto;
   display: flex;
   flex-flow: row nowrap;
@@ -279,17 +280,21 @@ button {
   color: #333333;
   padding: 1.5rem 1rem 0.5rem 1rem;
   height: 48px;
-  margin-left: 22px;
+}
+.header-logo-link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .header-arrow-back {
   width: 5rem;
-  height: 3rem;
-  line-height: 5rem;
+  line-height: 4.5rem;
   font-size: 1.5rem;
 }
 .header-arrow-back a {
-  -webkit-text-decoration: black;
-          text-decoration: black;
+  text-decoration: none;
+  color: black;
 }
 .header-arrow-back-hidden {
   opacity: 0;
@@ -299,26 +304,35 @@ button {
   .header {
     align-items: flex-start;
     box-shadow: none;
-  }
-  .header-logo {
-    margin-left: 60px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .header-logo {
-    margin-left: 250px;
+    /* &-logo {
+        margin-left: 60px;
+    } */
   }
 }
+/* @media screen and (min-width: 768px) {
+    .header {
+        &-logo {
+            margin-left: 250px;
+        }
+    }
+}
+
 @media screen and (min-width: 1024px) {
-  .header-logo {
-    margin-left: 370px;
-  }
+    .header {
+        &-logo {
+            margin-left: 370px;
+        }
+    }
 }
+
 @media screen and (min-width: 1025px) {
-  .header-logo {
-    margin-left: 575px;
-  }
+    .header {
+        &-logo {
+            margin-left: 575px;
+        }
+    }
 }
+ */
 footer {
   color: #fff;
   background: #333333;
@@ -446,7 +460,7 @@ footer .footer-item-1 {
   justify-content: center;
   background-color: #e7e7e7;
   text-align: center;
-  padding: 0.5rem;
+  padding: 0.6rem;
 }
 .home-neighb {
   font-size: 1.1rem;
@@ -684,7 +698,7 @@ footer .footer-item-1 {
 .home-card .card-desc-icon-fill {
   position: absolute;
   font-size: 1.34rem;
-  top: -13px;
+  top: -11.5px;
   transform: scale(0.8);
 }
 .home-card .card-desc-icon:hover .card-desc-icon-empty {
@@ -741,7 +755,7 @@ footer .footer-item-1 {
   }
   .home-card .section-title {
     align-self: center;
-    margin: 0 500px;
+    margin: 0 505px;
   }
   .home-card .card {
     width: 288px;
