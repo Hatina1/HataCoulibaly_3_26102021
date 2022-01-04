@@ -75,6 +75,7 @@ body{
         margin: 1rem 0;
         //animation: menu_item 800ms cubic-bezier(.1,.9,.1,1);
         animation: menu_item ease-in-out;
+        cursor: pointer;
         &-1 {
             animation-duration: 1200ms;
             //animation-delay: 350ms;
@@ -161,7 +162,7 @@ body{
             line-height: 5rem;
             width: 20%;
             border-radius: 0 15px 15px 0;
-            transform:translateX(9999px) ;
+            transform:translateX(0px);
             //opacity: 0;
             //transition: transform 550ms ease-in-out;    //400ms
             & i {

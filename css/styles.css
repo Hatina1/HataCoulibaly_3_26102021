@@ -846,6 +846,7 @@ body {
   margin: 1rem 0;
   -webkit-animation: menu_item ease-in-out;
           animation: menu_item ease-in-out;
+  cursor: pointer;
 }
 .card-menu-1 {
   -webkit-animation-duration: 1200ms;
@@ -929,7 +930,7 @@ body {
   line-height: 5rem;
   width: 20%;
   border-radius: 0 15px 15px 0;
-  transform: translateX(9999px);
+  transform: translateX(0px);
 }
 .card-menu-ok i {
   background-color: #fff;
